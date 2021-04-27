@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que horas são?</title>
+</head>
+
+<body>
+    <h3>Me conte as horas</h3>
+    Que horas são?
+    <input type="number" nome="hora" id="hora">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var hora = document.querySelector(`input#hora`)
+            var res = document.querySelector('div#res')
+            var horas = Number(hora.value)
+            res.innerHTML = `São exatamente ${res.value} horas`
+            if (hora < 12) {
+                res.innerHTML = "Bom dia!"
+            } else if (hora < 18) {
+                res.innerHTML = 'Boa tarde!'
+            } 
+        }
+    </script>
+</body>
+
+</html>
